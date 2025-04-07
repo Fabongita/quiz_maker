@@ -10,7 +10,7 @@ while flow_of_the_game:
     option_label = ["a", "b", "c", "d"] #initializes the choices a b c and d which resets after the loop starts again
     question = input("Think of a multiple choice question and input it here: ") # asks users to add there question
     correct_answer = input("input the correct answer: ") #ask user to input the correct answer
-    wrong_answers = [int(input(f"input the incorrect answer 3 times ({i+1}): ")) for i in range(3)] #asks the user to input the wrong answer 3 times
+    wrong_answers = [input(f"input the incorrect answer 3 times ({i+1}): ") for i in range(3)] #asks the user to input the wrong answer 3 times
     random.shuffle(option_label) #shuffles the options list
     correct_label = option_label[0] #takes only one option from the list
     correct_option = {correct_label: correct_answer} #assigns the correct answer to the label
