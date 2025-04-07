@@ -1,7 +1,12 @@
 # Import tkinker for the user interface  
-import tkinter as tk
+from tkinter import *
+from tkinter import ttk
 # Import random to make sure that the correct answer is at least randomly in a b c or d
 import random
+
+# Setup main window
+root = Tk()
+root.title("Create your own quiz game")
 
 question_list = [] #questions to be used
 
@@ -37,5 +42,7 @@ while flow_of_the_game:
    
     question_list.append(question_data)
 
-# Setup main window
+
+
+
 # Initialize input widgets
