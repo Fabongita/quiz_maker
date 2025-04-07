@@ -4,6 +4,7 @@ import tkinter as tk
 import random
 
 question_list = [] #questions to be used
+
 # Add main user question input logic
 flow_of_the_game = True # variable that checks if the user still wants to add questions or no
 
@@ -36,5 +37,5 @@ while flow_of_the_game:
    
     question_list.append(question_data)
 
-for q in question_list:
-    print(q)
+# Setup main window
+# Initialize input widgets
