@@ -18,6 +18,8 @@ while flow_of_the_game:
     question = input("Think of a multiple choice question and input it here (enter nothing if you are done): ") # asks users to add there question, and add blank if they want to stop
     
     if not question: #checks if the input in the question variable is a space or not
+        #add a file handling logic that collects the data from the questions list to a text file
+       
         break #breaks the whole loop
     correct_answer = input("input the correct answer: ") #ask user to input the correct answer
 
@@ -31,8 +33,8 @@ while flow_of_the_game:
     
     incorrect_option = {}
     
-    for index, labels in enumerate(option_label[1:]): # goes through the randomized option labels and assigns the index and the specific label
-        incorrect_option[labels] = wrong_answers[index]
+    for index, label in enumerate(option_label[1:]): # goes through the randomized option labels and assigns the index and the specific label
+        incorrect_option[label] = wrong_answers[index]
     
     all_options = {**correct_option, **incorrect_option} # merges all the options
 
@@ -45,4 +47,3 @@ while flow_of_the_game:
 
 
 
-# Initialize input widgets
