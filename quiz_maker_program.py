@@ -17,7 +17,6 @@ while flow_of_the_game:
     incorrect_option = {}
     for index, labels in enumerate(option_label[1:]): # goes through the randomized option labels and assigns the index and the specific label
         incorrect_option[labels] = wrong_answers[index]
-
+    all_options = {**correct_option, **incorrect_option} # merges all the options
     if question:
-
 
