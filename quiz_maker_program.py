@@ -19,7 +19,9 @@ while flow_of_the_game:
     
     if not question: #checks if the input in the question variable is a space or not
         #add a file handling logic that collects the data from the questions list to a text file
-       
+       with open("quiz_game.txt", "w") as file:
+        for items in question_list: #iterates through the items inside the question list
+           print("Question: " + items["Questions"] + "/n") #specifically prints the question 
         break #breaks the whole loop
     correct_answer = input("input the correct answer: ") #ask user to input the correct answer
 
