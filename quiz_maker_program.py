@@ -1,7 +1,6 @@
 # Import tkinker for the user interface  
 from tkinter import *
-from tkinter import ttk
-from tkinter import simpledialog #added simple dialogue for simple user interaction
+from tkinter import ttk, simpledialog  #added simple dialogue for simple user interaction
 # Import random to make sure that the correct answer is at least randomly in a b c or d
 import random
 
@@ -53,6 +52,10 @@ def questions_options_answers():
                         "correct answer": correct_option}
     
         question_list.append(question_data)
+button = Button(root, text="Press if you want to start adding questions", command=questions_options_answers)
+button.pack(pady=40)
+root.mainloop()
+
 
 
 
