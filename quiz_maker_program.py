@@ -1,6 +1,7 @@
 # Import tkinker for the user interface  
 from tkinter import *
 from tkinter import ttk
+from tkinter import simpledialog #added simple dialogue for simple user interaction
 # Import random to make sure that the correct answer is at least randomly in a b c or d
 import random
 
