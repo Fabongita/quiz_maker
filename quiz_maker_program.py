@@ -34,6 +34,8 @@ def questions_options_answers():
 
         wrong_answers = []
         #create a for loop that repeats the askstring function 3 times
+        for i in range(3):
+           simple_dialogue_answer = simpledialog.askstring(f"Please input the wrong answer 3 times ({i+1} times inputted): ")
         
         random.shuffle(option_label) #shuffles the options list
         
