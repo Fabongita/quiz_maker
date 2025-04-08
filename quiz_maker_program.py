@@ -20,12 +20,13 @@ while flow_of_the_game:
     if not question: #checks if the input in the question variable is a space or not
        
         #add a file handling logic that collects the data from the questions list to a text file
-       with open("testing_quizgame.txt", "w") as file:
+       with open("testing2_quizgame.txt", "w") as file:
         for items in question_list: #iterates through the items inside the question list
            file.write("Question: " + items["Questions"] + "\n") #specifically prints the question 
            for label, options in sorted(items["Options"].items()): 
               file.write(f"{label.upper()}  {options} \n") #prints the choices
-           file.write("correct answer " + str(items["correct answer"]) + "\n") #Prints the raw correct answer inside the text file
+           for label, answers in(items["correct answer"].items()): #iterates through the items inside the correct answers list
+            file.write("correct answer " + label.upper() + ": " + answers + "\n") #Prints the correct answer inside the text file
 
         break #breaks the whole loop
     correct_answer = input("input the correct answer: ") #ask user to input the correct answer
