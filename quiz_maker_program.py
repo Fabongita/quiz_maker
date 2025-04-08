@@ -8,6 +8,7 @@ import random
 # Setup main window
 root = Tk()
 root.title("Create your own quiz game")
+root.geometry("750x250")
 
 question_list = [] #questions to be used
 
@@ -16,7 +17,7 @@ flow_of_the_game = True # variable that checks if the user still wants to add qu
 
 while flow_of_the_game:
     option_label = ["a", "b", "c", "d"] #initializes the choices a b c and d which resets after the loop starts again
-    question = input("Think of a multiple choice question and input it here (enter nothing if you are done): ") # asks users to add there question, and add blank if they want to stop
+    question = input("input question", "Think of a multiple choice question and input it here (enter nothing if you are done): ") # asks users to add there question, and add blank if they want to stop
     
     if not question: #checks if the input in the question variable is a space or not
        
@@ -30,7 +31,7 @@ while flow_of_the_game:
             file.write("correct answer " + label.upper() + ": " + answers + "\n") #Prints the correct answer inside the text file
 
         break #breaks the whole loop
-    correct_answer = input("input the correct answer: ") #ask user to input the correct answer
+    correct_answer = simpledialog.askstring("Input correct answer", "input the correct answer: ") #ask user to input the correct answer
 
     wrong_answers = [input(f"input the incorrect answer 3 times ({i+1}): ") for i in range(3)] #asks the user to input the wrong answer 3 times
     
