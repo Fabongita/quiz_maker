@@ -23,11 +23,11 @@ def questions_options_answers():
             #add a file handling logic that collects the data from the questions list to a text file
          with open("testing2_quizgame.txt", "w") as file:
             for items in question_list: #iterates through the items inside the question list
-             file.write("Question: " + items["Questions"] + "\n") #specifically prints the question 
-            for label, options in sorted(items["Options"].items()): 
-                file.write(f"{label.upper()}  {options} \n") #prints the choices
-            for label, answers in(items["correct answer"].items()): #iterates through the items inside the correct answers list
-                file.write("correct answer " + label.upper() + ": " + answers + "\n") #Prints the correct answer inside the text file
+                file.write("Question: " + items["Questions"] + "\n") #specifically prints the question 
+                for label, options in sorted(items["Options"].items()): 
+                    file.write(f"{label.upper()}  {options} \n") #prints the choices
+                for label, answers in(items["correct answer"].items()): #iterates through the items inside the correct answers list
+                    file.write("correct answer " + label.upper() + ": " + answers + "\n") #Prints the correct answer inside the text file
 
             break #breaks the whole loop
         correct_answer = simpledialog.askstring("Input correct answer", "input the correct answer: ") #ask user to input the correct answer
@@ -35,7 +35,10 @@ def questions_options_answers():
         wrong_answers = []
         #create a for loop that repeats the askstring function 3 times
         for i in range(3):
-           simple_dialogue_answer = simpledialog.askstring(f"Please input the wrong answer 3 times ({i+1} times inputted): ")
+           simple_dialogue_answer = simpledialog.askstring("3 incorrect answers input ", f"Please input the wrong answer 3 times ({i+1} times inputted): ")
+           if simple_dialogue_answer is None:
+              simple_dialogue_answer = ""
+              wrong_answers.append(simple_dialogue_answer)
         
         random.shuffle(option_label) #shuffles the options list
         
