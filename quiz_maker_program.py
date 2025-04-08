@@ -36,9 +36,13 @@ def questions_options_answers():
         #create a for loop that repeats the askstring function 3 times
         for i in range(3):
            simple_dialogue_answer = simpledialog.askstring("3 incorrect answers input ", f"Please input the wrong answer 3 times ({i+1} times inputted): ")
-           if simple_dialogue_answer is None:
-              simple_dialogue_answer = ""
-              wrong_answers.append(simple_dialogue_answer)
+           if simple_dialogue_answer is None: # checks if the answer is blank
+              simple_dialogue_answer = "" #converts the blank into space
+           wrong_answers.append(simple_dialogue_answer) #appends the answers into the wrong answer list
+
+        if len(wrong_answers) != 3: # checks if the wrong answers are not exactly 3
+           print("Please input exactly 3 answers")
+           return 
         
         random.shuffle(option_label) #shuffles the options list
         
