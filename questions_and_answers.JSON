@@ -1,0 +1,26 @@
+[
+    {
+        "Questions": "due to wind pressure should I eat luncheon meat?",
+        "Options": {
+            "d": "yes",
+            "c": "no",
+            "a": "don't",
+            "b": "never ever"
+        },
+        "correct answer": {
+            "d": "yes"
+        }
+    },
+    {
+        "Questions": "is philomena cunk funny?",
+        "Options": {
+            "d": "yes",
+            "c": "not ever",
+            "b": "she ain't",
+            "a": "hindi"
+        },
+        "correct answer": {
+            "d": "yes"
+        }
+    }
+]
