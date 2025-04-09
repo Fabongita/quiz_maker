@@ -53,9 +53,12 @@ def questions_options_answers():
         
         all_options = {**correct_option, **incorrect_option} # merges all the options
 
+        # add a dictionary that reorders the options dictionary so that it is in order: a, b, c, d
+        
+
         question_data = {"Questions": question,
                         "Options": all_options,
-                        "correct answer": correct_option}
+                        "correct answer": correct_label}
     
         question_list.append(question_data)
 button = Button(root, text="Press if you want to start adding questions", command=questions_options_answers)

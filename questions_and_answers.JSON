@@ -1,0 +1,12 @@
+[
+    {
+        "Questions": "does pucca love garu",
+        "Options": {
+            "c": "yes",
+            "d": "no",
+            "a": "no",
+            "b": "no"
+        },
+        "correct answer": "c"
+    }
+]
