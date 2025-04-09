@@ -15,6 +15,7 @@ question_list = [] #questions to be used
 # Add main user question input logic
 flow_of_the_game = True # variable that checks if the user still wants to add questions or no
 def questions_options_answers():
+    root.withdraw() # closes the main window to ensure that the user gets to type freely without having to manually click to type
     while flow_of_the_game:
         option_label = ["a", "b", "c", "d"] #initializes the choices a b c and d which resets after the loop starts again
         question = simpledialog.askstring("input question", "Think of a multiple choice question and input it here (enter nothing if you are done): ") # asks users to add there question, and add blank if they want to stop
