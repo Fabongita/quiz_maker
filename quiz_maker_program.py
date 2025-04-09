@@ -54,10 +54,14 @@ def questions_options_answers():
         all_options = {**correct_option, **incorrect_option} # merges all the options
 
         # add a dictionary that reorders the options dictionary so that it is in order: a, b, c, d
-        
+        ordered_options = {}
+
+        for label in ["a", "b", "c", "d"]:
+           if label in all_options:
+                ordered_options[label] = all_options[label]
 
         question_data = {"Questions": question,
-                        "Options": all_options,
+                        "Options": ordered_options,
                         "correct answer": correct_label}
     
         question_list.append(question_data)
