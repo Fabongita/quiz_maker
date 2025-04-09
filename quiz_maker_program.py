@@ -21,7 +21,7 @@ def questions_options_answers():
         if not question: #checks if the input in the question variable is a space or not
         
             #add a file handling logic that collects the data from the questions list to a text file
-         with open("questions_and_answers.txt", "w") as file:
+         with open("questions_and_answers.txt", "w", "utf = 8") as file:
             for items in question_list: #iterates through the items inside the question list
                 file.write("Question: " + items["Questions"] + "\n") #specifically prints the question 
                 for label, options in sorted(items["Options"].items()): 
