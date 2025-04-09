@@ -66,6 +66,11 @@ def questions_options_answers():
                         "correct answer": correct_label}
     
         question_list.append(question_data)
+# loading up the image by adding the photos by using a logo
+logo = PhotoImage(file= "quiz_maker.png")
+logo_label = Label(root, image = logo)
+logo_label.pack(pady=10)
+# start button        
 button = Button(root, text="Press if you want to start adding questions", command=questions_options_answers)
 button.pack(pady=40)
 root.mainloop()
