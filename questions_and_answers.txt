@@ -1,3 +1,4 @@
+!st test
 Question: Ohm�s Law relates voltage (V), current (I), and resistance (R) as:
 A  I = V � R 
 B  V = I � R 
@@ -16,3 +17,4 @@ B  Energy cannot be created or destroyed.
 C  A body at rest stays at rest unless acted upon by a force. 
 D  Every action has an equal and opposite reaction. 
 correct answer A: Force equals mass times acceleration
+2nd test
