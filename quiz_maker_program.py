@@ -8,7 +8,7 @@ import json
 # Setup main window
 root = Tk()
 root.title("Create your own quiz game")
-root.geometry("750x250")
+root.geometry("800x1000")
 
 question_list = [] #questions to be used
 
@@ -67,7 +67,7 @@ def questions_options_answers():
     
         question_list.append(question_data)
 # loading up the image by adding the photos by using a logo
-logo = PhotoImage(file= "quiz_maker.png")
+logo = PhotoImage(file= "quiz_game_pic.png")
 logo_label = Label(root, image = logo)
 logo_label.pack(pady=10)
 # start button        
