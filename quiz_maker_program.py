@@ -20,7 +20,7 @@ def questions_options_answers():
         option_label = ["a", "b", "c", "d"] #initializes the choices a b c and d which resets after the loop starts again
         question = simpledialog.askstring("input question", "Think of a multiple choice question and input it here (enter nothing if you are done): ") # asks users to add there question, and add blank if they want to stop
         
-        if not question: #checks if the input in the question variable is a space or not
+        if not question: #checks if the input in the question variable is a blank space or not
         
             #add a file handling logic that collects the data from the questions list to a text file
          with open("questions_and_answers.json", "w", encoding= "utf-8") as file:
