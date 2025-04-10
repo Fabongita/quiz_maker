@@ -1,0 +1,22 @@
+[
+    {
+        "Questions": "Newton\u2019s Second Law of Motion is",
+        "Options": {
+            "a": "A body at rest stays at rest unless acted upon by a force.",
+            "b": "Force equals mass times acceleration.\n",
+            "c": "Energy cannot be created or destroyed.",
+            "d": " Every action has an equal and opposite reaction."
+        },
+        "correct answer": "b"
+    },
+    {
+        "Questions": "Ohm\u2019s Law relates voltage (V), current (I), and resistance (R) as:\n",
+        "Options": {
+            "a": "V = I \u00d7 R",
+            "b": "R = V \u00d7 I",
+            "c": "V = I \u00f7 R\n",
+            "d": " I = V \u00d7 R"
+        },
+        "correct answer": "a"
+    }
+]
