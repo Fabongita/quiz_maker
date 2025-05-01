@@ -7,7 +7,7 @@ def quiz_maker():
     pass
 
 # Function for the when the start is pressed that the start button is going to use
-def start_button():
+def start_button_logic():
     pass
 
 # Function for the saved quizzes the quiz saved quizzes button is going to use
@@ -43,7 +43,9 @@ intro_label.pack(side="top", padx = "20", pady="20")
 # buttons
 quiz_creator_button = Button(root, text="sheesh bro", height="7", width="20",  activebackground="blue", activeforeground="yellow", command = quiz_maker )
 quiz_creator_button.pack(padx="20", pady="20", side="left") 
-start_button = None
-saved_quizzes_button = None
+start_button = Button(root, text="I am steve", height="7", width="20",  activebackground="blue", activeforeground="yellow", command = start_button_logic )
+start_button.pack(padx="20", pady="20") 
+saved_quizzes_button = Button(root, text="SPAM", height="7", width="20",  activebackground="blue", activeforeground="yellow", command = saved_quizzes )
+saved_quizzes_button.pack(padx="20", pady="20", side="right") 
 
 root.mainloop()
