@@ -28,6 +28,9 @@ root = Tk()
 root.title("Quiz game")
 root.geometry("800x1000")
 #Add a label for the intro screen
+
+#Create a frame for the intro screen, create quizzes screen, start screen, and saved quizzes screen
+ 
 ascii_art = """
 ________        .__           ________                       
 \_____  \  __ __|__|_______  /  _____/_____    _____   ____  
@@ -45,10 +48,10 @@ button_frame.pack(side="bottom", padx="10")
 
 # buttons
 quiz_creator_button = Button(button_frame, text="sheesh bro", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=quiz_maker )
-quiz_creator_button.pack(padx="20", pady="20", side="left") 
+quiz_creator_button.pack(padx="10", pady="70", side="left") 
 start_button = Button(button_frame, text="I am steve", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=start_button_logic )
-start_button.pack(padx="20", pady="20") 
+start_button.pack(padx="10", pady="70", side="left") 
 saved_quizzes_button = Button(button_frame, text="SPAM", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=saved_quizzes )
-saved_quizzes_button.pack(padx="20", pady="20", side="right") 
+saved_quizzes_button.pack(padx="10", pady="70", side="left") 
 
 root.mainloop()
