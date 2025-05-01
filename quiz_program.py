@@ -39,13 +39,16 @@ ________        .__           ________
 """
 intro_label = Label(root, text=ascii_art, font="Courier")
 intro_label.pack(side="top", padx = "20", pady="20")
+# Frame to organize buttons
+button_frame = Frame(root)
+button_frame.pack(side="bottom", padx="10")
 
 # buttons
-quiz_creator_button = Button(root, text="sheesh bro", height="7", width="20",  activebackground="blue", activeforeground="yellow", command = quiz_maker )
+quiz_creator_button = Button(button_frame, text="sheesh bro", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=quiz_maker )
 quiz_creator_button.pack(padx="20", pady="20", side="left") 
-start_button = Button(root, text="I am steve", height="7", width="20",  activebackground="blue", activeforeground="yellow", command = start_button_logic )
+start_button = Button(button_frame, text="I am steve", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=start_button_logic )
 start_button.pack(padx="20", pady="20") 
-saved_quizzes_button = Button(root, text="SPAM", height="7", width="20",  activebackground="blue", activeforeground="yellow", command = saved_quizzes )
+saved_quizzes_button = Button(button_frame, text="SPAM", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=saved_quizzes )
 saved_quizzes_button.pack(padx="20", pady="20", side="right") 
 
 root.mainloop()
