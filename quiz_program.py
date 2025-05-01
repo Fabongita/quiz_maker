@@ -28,7 +28,11 @@ ________        .__           ________
 """
 intro_label = Label(root, text=ascii_art, font="Courier")
 intro_label.pack(side="top", padx = "20", pady="20")
-quiz_creator_button = None 
+
+# buttons
+quiz_creator_button = Button(root, text="sheesh bro", height="7", width="20",  activebackground="blue", activeforeground="yellow")
+quiz_creator_button.pack(padx="20", pady="20", side="left") 
 start_button = None
 saved_quizzes_button = None
+
 root.mainloop()
