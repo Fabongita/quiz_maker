@@ -58,5 +58,10 @@ saved_quizzes_button = Button(button_frame, text="SPAM", height="7", width="20",
 saved_quizzes_button.pack(padx="10", pady="70", side="left") 
 
 # stack the frames
+for frame in (intro_frame, saved_quizzes_frame, create_quizzes_frame):
+    frame.place(relwidth=1, relheight=1)
+
+# Call the frame to be used
+intro_frame.tkraise()
 
 root.mainloop()
