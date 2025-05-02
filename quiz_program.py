@@ -1,10 +1,10 @@
 from tkinter import *
 import random
 import json 
-
+import subprocess
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
-    pass
+    subprocess.call(["python", "quiz_maker_program.py"])
 
 # Function for the when the start is pressed that the start button is going to use
 def start_button_logic():
