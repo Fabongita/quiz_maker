@@ -30,7 +30,10 @@ root.geometry("800x1000")
 #Add a label for the intro screen
 
 #Create a frame for the intro screen, create quizzes screen, start screen, and saved quizzes screen
- 
+intro_frame = Frame(root)
+create_quizzes_frame = Frame(root)
+saved_quizzes_frame = Frame(root)
+
 ascii_art = """
 ________        .__           ________                       
 \_____  \  __ __|__|_______  /  _____/_____    _____   ____  
