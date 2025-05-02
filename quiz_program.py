@@ -43,10 +43,10 @@ ________        .__           ________
        \__>              \/         \/     \/      \/     \/ 
                                                                                                                                                                                                                              ░                                                                                                     
 """
-intro_label = Label(root, text=ascii_art, font="Courier")
+intro_label = Label(intro_frame, text=ascii_art, font="Courier")
 intro_label.pack(side="top", padx = "20", pady="20")
 # Frame to organize buttons
-button_frame = Frame(root)
+button_frame = Frame(intro_frame)
 button_frame.pack(side="bottom", padx="10")
 
 # buttons
@@ -56,5 +56,7 @@ start_button = Button(button_frame, text="I am steve", height="7", width="20",  
 start_button.pack(padx="10", pady="70", side="left") 
 saved_quizzes_button = Button(button_frame, text="SPAM", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=saved_quizzes )
 saved_quizzes_button.pack(padx="10", pady="70", side="left") 
+
+# stack the frames
 
 root.mainloop()
