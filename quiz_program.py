@@ -50,11 +50,11 @@ button_frame = Frame(intro_frame)
 button_frame.pack(side="bottom", padx="10")
 
 # buttons
-quiz_creator_button = Button(button_frame, text="sheesh bro", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=quiz_maker )
+quiz_creator_button = Button(button_frame, text="Create Quiz", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=quiz_maker )
 quiz_creator_button.pack(padx="10", pady="70", side="left") 
-start_button = Button(button_frame, text="I am steve", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=start_button_logic )
+start_button = Button(button_frame, text="Start game", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=start_button_logic )
 start_button.pack(padx="10", pady="70", side="left") 
-saved_quizzes_button = Button(button_frame, text="SPAM", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=saved_quizzes )
+saved_quizzes_button = Button(button_frame, text="Saved Quizzes", height="7", width="20",  activebackground="blue", activeforeground="yellow", command=saved_quizzes )
 saved_quizzes_button.pack(padx="10", pady="70", side="left") 
 
 # stack the frames
