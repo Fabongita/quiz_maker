@@ -16,6 +16,7 @@ question_list = [] #questions to be used
 flow_of_the_game = True # variable that checks if the user still wants to add questions or no
 def questions_options_answers():
     root.withdraw() # closes the main window to ensure that the user gets to type freely without having to manually click to type
+    quiz_name = simpledialog.askstring("input name of the quiz", "Input the name of the quiz") #ask user to add quiz name
     while flow_of_the_game:
         option_label = ["a", "b", "c", "d"] #initializes the choices a b c and d which resets after the loop starts again
         question = simpledialog.askstring("input question", "Think of a multiple choice question and input it here (enter nothing if you are done): ") # asks users to add there question, and add blank if they want to stop
@@ -61,7 +62,8 @@ def questions_options_answers():
            if label in all_options:
                 ordered_options[label] = all_options[label]
 
-        question_data = {"Questions": question,
+        question_data = {"Quiz name": quiz_name, 
+                         "Questions": question,
                         "Options": ordered_options,
                         "correct answer": correct_label}
     
