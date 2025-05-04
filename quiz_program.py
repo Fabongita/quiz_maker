@@ -3,6 +3,7 @@ import random
 import json 
 import subprocess
 
+
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
     subprocess.call(["python", "quiz_maker_program.py"])
@@ -16,7 +17,9 @@ def saved_quizzes():
   # Unload all the contents of questions and answer JSON file
  with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
     json_file = json.load(file)
-
+    
+    saved_quizzes_frame.tkraise()
+    
 # Open the main window of the tkinter
 root = Tk()
 root.title("Quiz game")
@@ -27,6 +30,8 @@ root.geometry("800x1000")
 intro_frame = Frame(root)
 create_quizzes_frame = Frame(root)
 saved_quizzes_frame = Frame(root)
+
+# Configure the listbox and the scrollbar for the saved quizzes 
 
 ascii_art = """
 ________        .__           ________                       
