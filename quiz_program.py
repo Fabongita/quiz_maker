@@ -37,7 +37,8 @@ quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
 scrollbar = Scrollbar(saved_quizzes_frame, orient=VERTICAL, command=quiz_listbox.yview)
 scrollbar.pack(side=RIGHT, fill=Y)
 # connect the listbox and scrollbar
-
+quiz_listbox.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=quiz_listbox.yview)
 
 ascii_art = """
 ________        .__           ________                       
