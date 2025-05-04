@@ -18,6 +18,8 @@ def saved_quizzes():
  with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
     json_file = json.load(file)
    
+    # Get the unique quiz names
+    
     # Populate the Listbox with quiz names
     quiz_listbox.delete(0, END)
  
