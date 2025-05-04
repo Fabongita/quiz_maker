@@ -17,14 +17,19 @@ def saved_quizzes():
   # Unload all the contents of questions and answer JSON file
  with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
     json_file = json.load(file)
-   
+    unique_name = []
     # Get the unique quiz names
-    
+    all_names = [entry["Quiz name"] for entry in json_file]
+
+    for name in all_names:
+       if name not in unique_name:
+          unique_name.append(all_names)
+
     # Populate the Listbox with quiz names
     quiz_listbox.delete(0, END)
  
- for entry in json_file:
-    quiz_listbox.insert(END, entry["Quiz name"])
+ for entry in unique_name:
+    quiz_listbox.insert(END, entry)
    
     saved_quizzes_frame.tkraise()
     
