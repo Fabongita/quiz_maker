@@ -32,6 +32,9 @@ create_quizzes_frame = Frame(root)
 saved_quizzes_frame = Frame(root)
 
 # Configure the listbox and the scrollbar for the saved quizzes 
+quiz_listbox = Listbox(saved_quizzes_frame, font=("Courier", 12)) 
+quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
+
 
 ascii_art = """
 ________        .__           ________                       
