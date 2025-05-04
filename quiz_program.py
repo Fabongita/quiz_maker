@@ -17,7 +17,13 @@ def saved_quizzes():
   # Unload all the contents of questions and answer JSON file
  with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
     json_file = json.load(file)
-    
+   
+    # Populate the Listbox with quiz names
+    quiz_listbox.delete(0, END)
+ 
+ for entry in json_file:
+    quiz_listbox.insert(END, entry["Quiz name"])
+   
     saved_quizzes_frame.tkraise()
     
 # Open the main window of the tkinter
