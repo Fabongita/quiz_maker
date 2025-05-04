@@ -3,10 +3,6 @@ import random
 import json 
 import subprocess
 
- # Unload all the contents of questions and answer JSON file
-with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
-    json_file = json.load(file)
-
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
     subprocess.call(["python", "quiz_maker_program.py"])
@@ -17,14 +13,10 @@ def start_button_logic():
 
 # Function for the saved quizzes the quiz saved quizzes button is going to use
 def saved_quizzes():
-  pass
-# Randomize the questions
-random_question = random.choice(json_file)
-# Set the Questions , Options, Correct answer
-questions = (random_question["Questions"])
-options = (random_question["Options"])
-correct_answer = (random_question["correct answer"])
-             
+  # Unload all the contents of questions and answer JSON file
+ with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
+    json_file = json.load(file)
+
 # Open the main window of the tkinter
 root = Tk()
 root.title("Quiz game")
