@@ -9,7 +9,10 @@ def quiz_maker():
     subprocess.call(["python", "quiz_maker_program.py"])
 # Function that would serve as the selection for the quizzes in the start button
 def load_button():
-   pass
+   selected = start_quiz_listbox.curselection()
+
+   start_frame.tkraise()   
+
 
 # Function for the when the start is pressed that the start button is going to use
 def start_button_logic():
@@ -25,7 +28,7 @@ def start_button_logic():
     for entry in unique_name:
      start_quiz_listbox.insert(END, entry)
      
-     start_frame.tkraise()   
+    start_frame.tkraise()   
 
 # Function for the saved quizzes the quiz saved quizzes button is going to use
 def saved_quizzes():
@@ -60,6 +63,8 @@ start_quiz_listbox = Listbox(start_frame, font=("Courier", 12))
 start_quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
 start_scrollbar = Scrollbar(start_frame, orient=VERTICAL, command=start_quiz_listbox.yview)
 start_scrollbar.pack(side=RIGHT, fill=Y)
+button = Button(start_frame, text="Print Selected", command=load_button)
+button.pack()
 
 # connect the listbox and scrollbar
 start_quiz_listbox.config(yscrollcommand=start_scrollbar.set)
