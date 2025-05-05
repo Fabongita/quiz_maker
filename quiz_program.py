@@ -10,7 +10,23 @@ def quiz_maker():
 
 # Function for the when the start is pressed that the start button is going to use
 def start_button_logic():
-    pass
+    with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
+     json_file = json.load(file)
+    # Get the unique quiz names
+    all_names = [entry["Quiz name"] for entry in json_file]
+    unique_name = list(set(all_names))
+   
+    # Populate the Listbox with quiz names
+    quiz_listbox.delete(0, END)
+ 
+    for entry in unique_name:
+     start_quiz_listbox.insert(END, entry)
+     
+     start_frame.tkraise()
+    
+
+    
+
 
 # Function for the saved quizzes the quiz saved quizzes button is going to use
 def saved_quizzes():
@@ -27,8 +43,9 @@ def saved_quizzes():
  
  for entry in unique_name:
     quiz_listbox.insert(END, entry)
-   
-    saved_quizzes_frame.tkraise()
+ saved_quizzes_frame.tkraise()
+    
+
     
 # Open the main window of the tkinter
 root = Tk()
@@ -38,8 +55,18 @@ root.geometry("800x1000")
 
 #Create a frame for the intro screen, create quizzes screen, start screen, and saved quizzes screen
 intro_frame = Frame(root)
-create_quizzes_frame = Frame(root)
+start_frame = Frame(root)
 saved_quizzes_frame = Frame(root)
+
+# Listbox and scrollbar for the saved quizzes of the start button
+start_quiz_listbox = Listbox(start_frame, font=("Courier", 12)) 
+start_quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
+start_scrollbar = Scrollbar(start_frame, orient=VERTICAL, command=start_quiz_listbox.yview)
+start_scrollbar.pack(side=RIGHT, fill=Y)
+# connect the listbox and scrollbar
+start_quiz_listbox.config(yscrollcommand=start_scrollbar.set)
+start_scrollbar.config(command=start_quiz_listbox.yview)
+
 
 # Configure the listbox and the scrollbar for the saved quizzes 
 quiz_listbox = Listbox(saved_quizzes_frame, font=("Courier", 12)) 
@@ -74,7 +101,7 @@ saved_quizzes_button = Button(button_frame, text="Saved Quizzes", height="7", wi
 saved_quizzes_button.pack(padx="10", pady="70", side="left") 
 
 # stack the frames
-for frame in (intro_frame, saved_quizzes_frame, create_quizzes_frame):
+for frame in (intro_frame, saved_quizzes_frame, start_frame):
     frame.place(relwidth=1, relheight=1)
 
 # Call the frame to be used
