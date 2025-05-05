@@ -31,5 +31,16 @@
             "d": "no"
         },
         "correct answer": "c"
+    },
+    {
+        "Quiz name": "pseudo smart quiz",
+        "Questions": "are you cool?",
+        "Options": {
+            "a": "yes",
+            "b": "yes",
+            "c": "nah",
+            "d": "yes"
+        },
+        "correct answer": "c"
     }
 ]

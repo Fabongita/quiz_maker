@@ -7,6 +7,9 @@ import subprocess
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
     subprocess.call(["python", "quiz_maker_program.py"])
+# Function that would serve as the selection for the quizzes in the start button
+def load_button():
+   pass
 
 # Function for the when the start is pressed that the start button is going to use
 def start_button_logic():
@@ -22,11 +25,7 @@ def start_button_logic():
     for entry in unique_name:
      start_quiz_listbox.insert(END, entry)
      
-     start_frame.tkraise()
-    
-
-    
-
+     start_frame.tkraise()   
 
 # Function for the saved quizzes the quiz saved quizzes button is going to use
 def saved_quizzes():
@@ -45,8 +44,6 @@ def saved_quizzes():
     quiz_listbox.insert(END, entry)
  saved_quizzes_frame.tkraise()
     
-
-    
 # Open the main window of the tkinter
 root = Tk()
 root.title("Quiz game")
@@ -63,10 +60,10 @@ start_quiz_listbox = Listbox(start_frame, font=("Courier", 12))
 start_quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
 start_scrollbar = Scrollbar(start_frame, orient=VERTICAL, command=start_quiz_listbox.yview)
 start_scrollbar.pack(side=RIGHT, fill=Y)
+
 # connect the listbox and scrollbar
 start_quiz_listbox.config(yscrollcommand=start_scrollbar.set)
 start_scrollbar.config(command=start_quiz_listbox.yview)
-
 
 # Configure the listbox and the scrollbar for the saved quizzes 
 quiz_listbox = Listbox(saved_quizzes_frame, font=("Courier", 12)) 
