@@ -20,5 +20,16 @@
             "d": "yes"
         },
         "correct answer": "d"
+    },
+    {
+        "Quiz name": "will this work quiz",
+        "Questions": "will this work?",
+        "Options": {
+            "a": "who knows",
+            "b": "yes",
+            "c": "maybe",
+            "d": "no"
+        },
+        "correct answer": "c"
     }
 ]

@@ -22,10 +22,16 @@ def questions_options_answers():
         question = simpledialog.askstring("input question", "Think of a multiple choice question and input it here (enter nothing if you are done): ") # asks users to add there question, and add blank if they want to stop
         
         if not question: #checks if the input in the question variable is a blank space or not
-        
+         # Read the file 
+         file_name = "questions_and_answers.json"
+         with open(file_name, "r", encoding= "utf-8") as file:
+            contents = json.load(file)
+         # extend it to the question list to that it doesn't overwrite
+         contents.extend(question_list)
+
             #add a file handling logic that collects the data from the questions list to a text file
-         with open("questions_and_answers.json", "w", encoding= "utf-8") as file:
-            json.dump(question_list, file, indent=4) 
+         with open(file_name, "w", encoding= "utf-8") as file:
+            json.dump(contents, file, indent=4) 
             break #breaks the whole loop
         
         correct_answer = simpledialog.askstring("Input correct answer", "input the correct answer: ") #ask user to input the correct answer
