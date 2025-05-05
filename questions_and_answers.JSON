@@ -1,24 +1,24 @@
 [
     {
-        "Quiz name": "pucca loves garu?",
-        "Questions": "does pucca love garu?",
+        "Quiz name": "pseudo-science quiz",
+        "Questions": "is earth flat?",
         "Options": {
-            "a": "no",
+            "a": "yes",
             "b": "yes",
             "c": "no",
-            "d": "no"
+            "d": "yes"
         },
-        "correct answer": "b"
+        "correct answer": "c"
     },
     {
-        "Quiz name": "pucca loves garu?",
-        "Questions": "does garu love pucca?",
+        "Quiz name": "pseudo-science quiz",
+        "Questions": "is earth round?",
         "Options": {
-            "a": "no",
-            "b": "yes",
+            "a": "don't ever suggest that again",
+            "b": "no",
             "c": "no",
-            "d": "no"
+            "d": "yes"
         },
-        "correct answer": "b"
+        "correct answer": "d"
     }
 ]
