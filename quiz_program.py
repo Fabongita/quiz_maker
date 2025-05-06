@@ -41,9 +41,7 @@ def load_button():
       with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
          contents = json.load(file)
          questions_to_play = [question for question in contents if question["Quiz name"] == quiz_name]
-      start(questions_to_play)
-
-   start_frame.tkraise()   
+      start(questions_to_play)  
 
 
 # Function for the when the start is pressed that the start button is going to use
