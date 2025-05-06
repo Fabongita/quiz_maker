@@ -77,6 +77,11 @@ question_label.pack(padx="20", pady="20")
 selected_answer = StringVar(value="")
 options_frame = Frame(play_frame)
 options_frame.pack(anchor="w", padx=20, pady=10)
+for option_letter in ("a", "b", "c", "d"):
+    radio_button = Radiobutton(options_frame, text=f"\u2022 {option_letter.upper()}",
+        variable=selected_answer, value=option_letter, indicatoron=True, font=("Courier", 14),
+        anchor="w", padx=10
+    )
 
 # Listbox and scrollbar for the saved quizzes of the start button
 start_quiz_listbox = Listbox(start_frame, font=("Courier", 12)) 
