@@ -48,7 +48,6 @@ def saved_quizzes():
     # Get the unique quiz names
     all_names = [entry["Quiz name"] for entry in json_file]
     unique_name = list(set(all_names))
-   
 
     # Populate the Listbox with quiz names
     quiz_listbox.delete(0, END)
@@ -71,6 +70,7 @@ play_frame = Frame(root)
 
 # label for the questions
 question_label = Label(play_frame, text= quiz_questions, font="Courier")
+question_label.pack(padx="20", pady="20")
 # Listbox and scrollbar for the saved quizzes of the start button
 start_quiz_listbox = Listbox(start_frame, font=("Courier", 12)) 
 start_quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
@@ -117,7 +117,7 @@ saved_quizzes_button = Button(button_frame, text="Saved Quizzes", height="7", wi
 saved_quizzes_button.pack(padx="10", pady="70", side="left") 
 
 # stack the frames
-for frame in (intro_frame, saved_quizzes_frame, start_frame):
+for frame in (intro_frame, saved_quizzes_frame, start_frame, play_frame):
     frame.place(relwidth=1, relheight=1)
 
 # Call the frame to be used
