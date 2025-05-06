@@ -53,5 +53,16 @@
             "d": "no, kaiser will"
         },
         "correct answer": "c"
+    },
+    {
+        "Quiz name": "future of nagi seishiro",
+        "Questions": "will nagi seishiro come back?",
+        "Options": {
+            "a": "reo will buy him back",
+            "b": "yes he will",
+            "c": "for sure",
+            "d": "no"
+        },
+        "correct answer": "d"
     }
 ]

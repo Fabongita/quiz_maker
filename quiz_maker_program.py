@@ -32,6 +32,7 @@ def questions_options_answers():
             #add a file handling logic that collects the data from the questions list to a text file
          with open(file_name, "w", encoding= "utf-8") as file:
             json.dump(contents, file, indent=4) 
+            root.destroy()
             break #breaks the whole loop
         
         correct_answer = simpledialog.askstring("Input correct answer", "input the correct answer: ") #ask user to input the correct answer
