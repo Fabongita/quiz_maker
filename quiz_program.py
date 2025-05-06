@@ -10,6 +10,16 @@ def quiz_maker():
 # Function that would serve as the selection for the quizzes in the start button
 def load_button():
    selected = start_quiz_listbox.curselection()
+   if not selected:
+      return  #returns nothing if nothing is selected
+   else:
+      index = selected[0] 
+      quiz_name = start_quiz_listbox.get(index)
+      with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
+         contents = json.load(file)
+         questions_to_play = [question for question in contents if question["Quiz name"] == quiz_name]
+      for question in questions_to_play:
+         print(question)
 
    start_frame.tkraise()   
 
