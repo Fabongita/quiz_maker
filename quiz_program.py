@@ -17,11 +17,19 @@ def start(questions):
 
 # Function for submitting
 def submit():
+   global score, current_index
    choice = selected_answer.get()
    correct = current_questions[current_index]["correct answer"]
    if choice == correct:
     score += 1
-
+   current_index += 1
+   if current_index < len(current_questions):
+        show_question()
+   else:
+        quiz_questions.set(f"Quiz complete! You scored {score} out of {len(current_questions)}.")
+        for radiobutton in radiobutton_widgets.values():
+            radiobutton.pack_forget()
+        submit_button.pack_forget()
 
 # Function for showing the question
 def show_question():
