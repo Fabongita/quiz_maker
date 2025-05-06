@@ -42,5 +42,16 @@
             "d": "yes"
         },
         "correct answer": "c"
+    },
+    {
+        "Quiz name": "isagi yoichi",
+        "Questions": "will isagi yoichi be the best striker?",
+        "Options": {
+            "a": "no, barou will",
+            "b": "no, rin will",
+            "c": "yes",
+            "d": "no, kaiser will"
+        },
+        "correct answer": "c"
     }
 ]

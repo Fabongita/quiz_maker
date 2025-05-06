@@ -19,7 +19,10 @@ def submit():
    pass
 # Function for showing the question
 def show_question():
-   pass
+   global current_index
+   question_data = current_questions[current_index]
+   quiz_questions.set(question_data["Questions"])
+   selected_answer.set("")
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
     subprocess.call(["python", "quiz_maker_program.py"])
