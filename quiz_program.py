@@ -63,7 +63,7 @@ root.title("Quiz game")
 root.geometry("800x1000")
 #Add a label for the intro screen
 
-#Create a frame for the intro screen, create quizzes screen, start screen, and saved quizzes screen
+#Create a frame for the intro screen, create quizzes screen, start screen, saved quizzes screen, and play screen
 intro_frame = Frame(root)
 start_frame = Frame(root)
 saved_quizzes_frame = Frame(root)
