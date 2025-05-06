@@ -2,7 +2,10 @@ from tkinter import *
 import random
 import json 
 import subprocess
-
+# Track the quiz state
+current_questions = []
+current_index = 0
+score = 0
 # Function for starting the game
 def start():
    pass
