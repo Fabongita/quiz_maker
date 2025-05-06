@@ -67,7 +67,10 @@ root.geometry("800x1000")
 intro_frame = Frame(root)
 start_frame = Frame(root)
 saved_quizzes_frame = Frame(root)
+play_frame = Frame(root)
 
+# label for the questions
+question_label = Label(play_frame, text= ?, font="Courier")
 # Listbox and scrollbar for the saved quizzes of the start button
 start_quiz_listbox = Listbox(start_frame, font=("Courier", 12)) 
 start_quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
