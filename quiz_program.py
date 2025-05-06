@@ -12,6 +12,7 @@ def start(questions):
    current_questions = questions
    current_index = 0
    score = 0
+   show_question()     
    play_frame.tkraise()
 
 # Function for submitting
