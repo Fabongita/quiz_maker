@@ -92,6 +92,10 @@ start_frame = Frame(root)
 saved_quizzes_frame = Frame(root)
 play_frame = Frame(root)
 
+# Submit button
+submit_button = Button(play_frame, text="Submit", command=submit)
+submit_button.pack(pady=10)
+
 # label for the questions
 question_label = Label(play_frame, textvariable= quiz_questions, font="Courier")
 question_label.pack(padx="20", pady="20")
