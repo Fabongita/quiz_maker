@@ -7,8 +7,13 @@ current_questions = []
 current_index = 0
 score = 0
 # Function for starting the game
-def start():
-   pass
+def start(questions):
+   global current_questions, current_index, score
+   current_questions = questions
+   current_index = 0
+   score = 0
+   play_frame.tkraise()
+
 # Function for submitting
 def submit():
    pass
@@ -29,8 +34,7 @@ def load_button():
       with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
          contents = json.load(file)
          questions_to_play = [question for question in contents if question["Quiz name"] == quiz_name]
-      for question in questions_to_play:
-         print(question)
+      start(questions_to_play)
 
    start_frame.tkraise()   
 
