@@ -61,8 +61,8 @@ def saved_quizzes():
 root = Tk()
 root.title("Quiz game")
 root.geometry("800x1000")
-#Add a label for the intro screen
 
+quiz_questions = StringVar()
 #Create a frame for the intro screen, create quizzes screen, start screen, saved quizzes screen, and play screen
 intro_frame = Frame(root)
 start_frame = Frame(root)
@@ -70,7 +70,7 @@ saved_quizzes_frame = Frame(root)
 play_frame = Frame(root)
 
 # label for the questions
-question_label = Label(play_frame, text= ?, font="Courier")
+question_label = Label(play_frame, text= quiz_questions, font="Courier")
 # Listbox and scrollbar for the saved quizzes of the start button
 start_quiz_listbox = Listbox(start_frame, font=("Courier", 12)) 
 start_quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
@@ -92,6 +92,7 @@ scrollbar.pack(side=RIGHT, fill=Y)
 quiz_listbox.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=quiz_listbox.yview)
 
+# Label for the intro screen
 ascii_art = """
 ________        .__           ________                       
 \_____  \  __ __|__|_______  /  _____/_____    _____   ____  
