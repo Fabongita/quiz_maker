@@ -45,6 +45,7 @@ def saved_quizzes():
   # Unload all the contents of questions and answer JSON file
  with open("questions_and_answers.JSON", "r", encoding= "utf-8" ) as file:
     json_file = json.load(file)
+
     # Get the unique quiz names
     all_names = [entry["Quiz name"] for entry in json_file]
     unique_name = list(set(all_names))
@@ -71,6 +72,12 @@ play_frame = Frame(root)
 # label for the questions
 question_label = Label(play_frame, text= quiz_questions, font="Courier")
 question_label.pack(padx="20", pady="20")
+
+# Radio buttons
+selected_answer = StringVar(value="")
+options_frame = Frame(play_frame)
+options_frame.pack(anchor="w", padx=20, pady=10)
+
 # Listbox and scrollbar for the saved quizzes of the start button
 start_quiz_listbox = Listbox(start_frame, font=("Courier", 12)) 
 start_quiz_listbox.pack(side=LEFT, fill=BOTH, expand=True, padx=20, pady=20)
