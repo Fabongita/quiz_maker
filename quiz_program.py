@@ -90,7 +90,7 @@ saved_quizzes_frame = Frame(root)
 play_frame = Frame(root)
 
 # label for the questions
-question_label = Label(play_frame, text= quiz_questions, font="Courier")
+question_label = Label(play_frame, textvariable= quiz_questions, font="Courier")
 question_label.pack(padx="20", pady="20")
 
 # Radio buttons
