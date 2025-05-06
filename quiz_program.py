@@ -25,6 +25,9 @@ def show_question():
    question_data = current_questions[current_index]
    quiz_questions.set(question_data["Questions"])
    selected_answer.set("")
+   options = question_data["Options"]
+   for letter, widget in radiobutton_widgets.items():
+    widget.config(text=f"{letter.upper()}: {options[letter]}")
 
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
