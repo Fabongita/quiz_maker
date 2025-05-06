@@ -17,15 +17,18 @@ def start(questions):
 # Function for submitting
 def submit():
    pass
+
 # Function for showing the question
 def show_question():
    global current_index
    question_data = current_questions[current_index]
    quiz_questions.set(question_data["Questions"])
    selected_answer.set("")
+
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
     subprocess.call(["python", "quiz_maker_program.py"])
+
 # Function that would serve as the selection for the quizzes in the start button
 def load_button():
    selected = start_quiz_listbox.curselection()
