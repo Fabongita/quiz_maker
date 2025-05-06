@@ -3,7 +3,15 @@ import random
 import json 
 import subprocess
 
-
+# Function for starting the game
+def start():
+   pass
+# Function for submitting
+def submit():
+   pass
+# Function for showing the question
+def show_question():
+   pass
 # Function for the quiz making logic the quiz creator button is going to use
 def quiz_maker():
     subprocess.call(["python", "quiz_maker_program.py"])
