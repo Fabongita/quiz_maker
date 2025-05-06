@@ -17,7 +17,11 @@ def start(questions):
 
 # Function for submitting
 def submit():
-   pass
+   choice = selected_answer.get()
+   correct = current_questions[current_index]["correct answer"]
+   if choice == correct:
+    score += 1
+
 
 # Function for showing the question
 def show_question():
