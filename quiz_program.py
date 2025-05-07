@@ -115,6 +115,9 @@ play_frame = Frame(root)
 main_menu_button = Button(play_frame, text="Main menu", command=lambda: intro_frame.tkraise())
 main_menu_button.pack(padx="20", pady="20")
 
+# Back button for saved quizzes
+Back_button_saved_quizzes = Button(saved_quizzes_frame, text="Back", command=lambda: intro_frame.tkraise())
+Back_button_saved_quizzes.pack(padx="20", pady="20", side="right")
 # Submit button
 submit_button = Button(play_frame, text="Submit", command=submit)
 submit_button.pack(pady=10)
