@@ -12,7 +12,8 @@ def start(questions):
    current_questions = questions
    current_index = 0
    score = 0
-   show_question()     
+   show_question() 
+   main_menu_button.pack_forget()    
    play_frame.tkraise()
 
 # Function for submitting
@@ -30,6 +31,7 @@ def submit():
         for radiobutton in radiobutton_widgets.values():
             radiobutton.pack_forget()
         submit_button.pack_forget()
+        main_menu_button.pack()
 
 # Function for showing the question
 def show_question():
@@ -103,6 +105,9 @@ intro_frame = Frame(root)
 start_frame = Frame(root)
 saved_quizzes_frame = Frame(root)
 play_frame = Frame(root)
+#Main menu button
+main_menu_button = Button(play_frame, text="Main menu", command=lambda: intro_frame.tkraise())
+main_menu_button.pack(padx="20", pady="20")
 
 # Submit button
 submit_button = Button(play_frame, text="Submit", command=submit)
