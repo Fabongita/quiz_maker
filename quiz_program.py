@@ -76,7 +76,7 @@ def start_button_logic():
     unique_name = list(set(all_names))
    
     # Populate the Listbox with quiz names
-    quiz_listbox.delete(0, END)
+    start_quiz_listbox.delete(0, END)
  
     for entry in unique_name:
      start_quiz_listbox.insert(END, entry)
