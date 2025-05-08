@@ -39,7 +39,7 @@ def submit():
         submit_button.pack_forget()
         main_menu_button.pack()
 
-# Function for showing the question
+# Function for showing the question and current options
 def show_question():
    global current_index
    question_data = current_questions[current_index]
