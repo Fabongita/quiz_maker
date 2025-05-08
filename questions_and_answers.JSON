@@ -1,1 +1,46 @@
-[]
+[
+    {
+        "Quiz name": "Science quiz",
+        "Questions": "Is earth hotter than the sun?",
+        "Options": {
+            "a": "yes",
+            "b": "correct",
+            "c": "no",
+            "d": "absolutely"
+        },
+        "correct answer": "c"
+    },
+    {
+        "Quiz name": "Science quiz",
+        "Questions": "is jupiter bigger than earth?",
+        "Options": {
+            "a": "no",
+            "b": "yes",
+            "c": "false",
+            "d": "not true"
+        },
+        "correct answer": "b"
+    },
+    {
+        "Quiz name": "Math quiz",
+        "Questions": "derivative of 2x is?",
+        "Options": {
+            "a": "3",
+            "b": "1",
+            "c": "2",
+            "d": "4"
+        },
+        "correct answer": "c"
+    },
+    {
+        "Quiz name": "Math quiz",
+        "Questions": "1+1 =?",
+        "Options": {
+            "a": "3",
+            "b": "2",
+            "c": "4",
+            "d": "1"
+        },
+        "correct answer": "b"
+    }
+]
